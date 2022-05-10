@@ -1,0 +1,79 @@
+* {
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	background-color: #4f4f4f;
+	color: #fff;
+	font-size: 20px;
+}
+
+button, input {
+	font-size: 16px;
+}
+
+main, section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#ToDoAdd {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+
+#ToDoList {
+	overflow-wrap: anywhere;
+}
+
+input {
+	outline: none;
+	padding: 10px;
+}
+
+/* ToDo completed */
+.completed {
+	text-decoration-color: #000;
+	color: #cccccc93;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 200px;
+	cursor: pointer;
+	padding: 3px;
+	font-size: 23px;
+}
+
+li::selection {
+	background-color: transparent;
+}
+
+button {
+	margin-left: 5px;
+	cursor: pointer;
+	background-color: #01c761;
+	font-weight: 600;
+}
+
+button:hover {
+	background-color: #008540;
+	color: #fff;
+}
+
+#ToDoDelete {
+	background-color: #ff0000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 2px;
+}

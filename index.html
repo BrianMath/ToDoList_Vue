@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>To Do List - Vue.js</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+	<main id="App">
+		<h1>To Do List</h1>
+
+		<section>
+			<div id="ToDoAdd">
+				<input type="text" name="ToDoInput" id="ToDoInput" @keyup.enter="addToDo">
+				<button @click="addToDo">Adicionar</button>
+			</div>
+
+			<div id="ToDoList">
+				{{ getToDos }}
+				<ul>
+					<li	v-for="todo in todos"
+						:key="todo.id"
+						:class="{ completed: todo.completed }"
+						@click="toggleCompleted(todo.id)">
+						&SmallCircle; {{ todo.text }}
+
+						<button v-if="todos.length > 0"
+							id="ToDoDelete"
+							@click="deleteToDo(todo.id)">
+							<span class="material-icons">
+								delete
+							</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<!-- Importar componente raiz -->
+	<script src="./main.js"></script>
+
+	<!-- Fazer mount do vue -->
+	<script>
+		App.mount('#App')
+	</script>
+</body>
+</html>
