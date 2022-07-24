@@ -1,12 +1,103 @@
+:root {
+    --pretoEscuro: #131313;
+    --pretoClaro: #1b1b1b;
+
+    --azulEscurao: #020024;
+    --azulEscuro: #090979;
+    --azul: #011aa3;
+    --azulDestaque: #001fcf;
+    --azulClaro: #0a7dd4;
+    --azulClarinho: #00d4ff;
+}
+
 * {
-	font-family: Roboto, sans-serif;
+	font-family: 'Nunito', sans-serif;
 }
 
 body {
+	margin: 0;
+    padding: 0;
+
 	background-color: #4f4f4f;
 	color: #fff;
 	font-size: 20px;
 }
+
+/* Configurações <header> */
+a, a:visited {
+    color: var(--azulClaro);
+}
+
+a:active, a:hover {
+    color: orange;
+
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* ----- Navbar (Barra de navegação) ----- */
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+	display: flex;
+    align-items: center;
+
+    background-color: var(--pretoEscuro);
+}
+
+nav ul li {
+    float: none;
+	min-width: 0px;
+
+	font-size: 18px;
+	font-weight: 600;
+}
+
+a.LinkNavbar {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    
+    color: #fff;
+}
+
+a.LinkNavbar:hover {
+    background-color: var(--pretoClaro);
+}
+
+a#Inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--azul);
+}
+
+a#Inicio:hover {
+    background-color: var(--azulDestaque);
+}
+
+a#Inicio img {
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    nav ul li {
+        float: left;
+    }
+}
+
+/* Fim <header>*/
 
 button, input {
 	font-size: 16px;
