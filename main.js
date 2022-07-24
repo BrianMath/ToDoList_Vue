@@ -8,6 +8,8 @@ const App = Vue.createApp({
 		addToDo() {
 			// Validation
 			let todoText = document.querySelector("#ToDoInput")
+			todoText.value = todoText.value.trim()
+
 			if (todoText.value === "") {
 				return
 			}
