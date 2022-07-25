@@ -126,11 +126,12 @@ ul {
 
 li {
 	padding: 3px;
-
 	min-width: 200px;
+
 	cursor: pointer;
 	font-size: 23px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	list-style: none;
 }
 
 li::selection {
@@ -169,10 +170,8 @@ button:hover {
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-
-	background-color: #0000006a;;
+	background-color: #0000006a;
+	padding-left: 3px;
 }
 
 footer a {

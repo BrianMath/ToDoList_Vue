@@ -52,6 +52,10 @@
 		</nav>
 	</header>
 
+	<footer>
+		<a href="https://iconscout.com/icons/list" target="_blank">List Icon</a> by <a href="https://iconscout.com/contributors/superndre" target="_blank">SuperNdre</a>
+	</footer>
+
 	<main id="App">
 		<h1>To Do List</h1>
 
@@ -69,7 +73,7 @@
 						@click="toggleCompleted(todo.id)">
 						<div id="ToDoItem">
 							<p :class="{ completed: todo.completed }">
-								{{ todo.text }}
+								• {{ todo.text }}
 							</p>
 							<button v-if="todos.length > 0"
 								id="ToDoDelete"
@@ -84,10 +88,6 @@
 			</div>
 		</section>
 	</main>
-
-	<footer>
-		<a href="https://iconscout.com/icons/list" target="_blank">List Icon</a> by <a href="https://iconscout.com/contributors/superndre" target="_blank">SuperNdre</a>
-	</footer>
 
 	<!-- Importar componente raiz -->
 	<script src="./main.js"></script>
