@@ -24,20 +24,7 @@ body {
 }
 
 /* Configurações <header> */
-a, a:visited {
-    color: var(--azulClaro);
-}
-
-a:active, a:hover {
-    color: orange;
-
-    transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-}
-
-p {
+nav p {
     margin: 0;
     font-size: 1.2em;
 }
@@ -100,7 +87,6 @@ a#Inicio img {
         float: left;
     }
 }
-
 /* Fim <header>*/
 
 button, input {
@@ -130,7 +116,7 @@ input {
 
 /* ToDo completed */
 .completed {
-	text-decoration-color: #000;
+	text-decoration: line-through;
 	color: #cccccc93;
 }
 
@@ -139,9 +125,6 @@ ul {
 }
 
 li {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding: 3px;
 
 	min-width: 200px;
@@ -152,6 +135,16 @@ li {
 
 li::selection {
 	background-color: transparent;
+}
+
+#ToDoItem {
+	display: flex;
+	align-items: center;
+}
+
+#ToDoItem p {
+	margin: 0;
+	padding: 0;
 }
 
 button {
@@ -173,4 +166,24 @@ button:hover {
 	align-items: center;
 	height: 100%;
 	padding: 2px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+
+	background-color: #0000006a;;
+}
+
+footer a {
+	color: orange;
+}
+
+footer a:hover {
+	color: var(--azulClaro);
+
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
 }

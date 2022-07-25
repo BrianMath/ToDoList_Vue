@@ -6,6 +6,20 @@
 
 	<title>To Do List - Vue.js</title>
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Meta tags para Whatsapp -->
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ToDOList">
+	<meta property="og:description" content="Salve qualquer coisa!">
+	<meta property="og:url" content="https://brianmath.github.io/ToDoList_Vue/">
+	<meta property="og:image" content="https://i.imgur.com/1dhVSuj.png">
+	<meta property="og:image:alt" content="Logo do site">
+	<meta property="og:image:width" content="512">
+	<meta property="og:image:height" content="512">
+
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://unpkg.com/vue@3"></script>
@@ -52,22 +66,28 @@
 				<ul>
 					<li	v-for="todo in todos"
 						:key="todo.id"
-						:class="{ completed: todo.completed }"
 						@click="toggleCompleted(todo.id)">
-						&SmallCircle; {{ todo.text }}
-
-						<button v-if="todos.length > 0"
-							id="ToDoDelete"
-							@click="deleteToDo(todo.id)">
-							<span class="material-icons">
-								delete
-							</span>
-						</button>
+						<div id="ToDoItem">
+							<p :class="{ completed: todo.completed }">
+								{{ todo.text }}
+							</p>
+							<button v-if="todos.length > 0"
+								id="ToDoDelete"
+								@click="deleteToDo(todo.id)">
+								<span class="material-icons">
+									delete
+								</span>
+							</button>
+						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
 	</main>
+
+	<footer>
+		<a href="https://iconscout.com/icons/list" target="_blank">List Icon</a> by <a href="https://iconscout.com/contributors/superndre" target="_blank">SuperNdre</a>
+	</footer>
 
 	<!-- Importar componente raiz -->
 	<script src="./main.js"></script>
